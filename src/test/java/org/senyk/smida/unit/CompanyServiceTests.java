@@ -30,7 +30,7 @@ public class CompanyServiceTests {
     long companyId = 1;
     Company company = Company.builder()
         .id(companyId)
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .registrationNumber("1234qwerty")
         .address("Lviv")
         .createdAt(LocalDateTime.now())

@@ -23,7 +23,7 @@ public class CompanyRepositoryTest {
   public void CompanyRepository_SaveAll_ReturnSavedCompany() {
 
     Company company = Company.builder()
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .registrationNumber("1234qwerty")
         .address("Lviv")
         .createdAt(LocalDateTime.now())
@@ -39,13 +39,13 @@ public class CompanyRepositoryTest {
   public void CompanyRepository_GetAll_ReturnMoreThenOneCompany() {
 
     Company company = Company.builder()
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .registrationNumber("1234qwerty")
         .address("Lviv")
         .createdAt(LocalDateTime.now())
         .build();
     Company company2 = Company.builder()
-        .name("ФОП Назар")
+        .name("Nazar FOP")
         .registrationNumber("1234qwerty2")
         .address("Lviv")
         .createdAt(LocalDateTime.now())
@@ -64,7 +64,7 @@ public class CompanyRepositoryTest {
   public void CompanyRepository_FindById_ReturnCompany() {
 
     Company company = Company.builder()
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .registrationNumber("1234qwerty")
         .address("Lviv")
         .createdAt(LocalDateTime.now())
@@ -81,7 +81,7 @@ public class CompanyRepositoryTest {
   public void CompanyRepository_UpdateCompany_ReturnCompanyNotNull() {
 
     Company company = Company.builder()
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .build();
 
     companyRepository.save(company);
@@ -98,7 +98,7 @@ public class CompanyRepositoryTest {
   public void CompanyRepository_CompanyDelete_ReturnCompanyIsEmpty() {
 
     Company company = Company.builder()
-        .name("ФОП Дмитро")
+        .name("Dmytro FOP")
         .build();
 
     companyRepository.save(company);

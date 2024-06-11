@@ -37,14 +37,15 @@ public class CompanyTest {
   @Test
   void testAddAndGetCompany() {
 
-    CompanyDto companyDto = new CompanyDto(null, "ФОП Дмитро", "1234qwerty", "Lviv", LocalDateTime.now());
+    CompanyDto companyDto = new CompanyDto(null, "Dmytro FOP", "1234qwerty", "Lviv",
+        LocalDateTime.now());
 
     companyService.addCompany(companyDto);
     List<CompanyDto> companies = companyService.getAllCompanies();
 
     assertThat(companies).hasSize(1);
     CompanyDto savedCompany = companies.get(0);
-    assertThat(savedCompany.getName()).isEqualTo("ФОП Дмитро");
+    assertThat(savedCompany.getName()).isEqualTo("Dmytro FOP");
     assertThat(savedCompany.getRegistrationNumber()).isEqualTo("1234qwerty");
     assertThat(savedCompany.getAddress()).isEqualTo("Lviv");
   }
@@ -52,11 +53,12 @@ public class CompanyTest {
   @Test
   void testGetCompanyById() {
 
-    Company company = companyRepository.save(new Company(null, "ФОП Дмитро", "1234qwerty", "Lviv", LocalDateTime.now()));
+    Company company = companyRepository.save(
+        new Company(null, "Dmytro FOP", "1234qwerty", "Lviv", LocalDateTime.now()));
 
     CompanyDto foundCompany = companyService.getCompanyById(company.getId());
 
-    assertThat(foundCompany.getName()).isEqualTo("ФОП Дмитро");
+    assertThat(foundCompany.getName()).isEqualTo("Dmytro FOP");
     assertThat(foundCompany.getRegistrationNumber()).isEqualTo("1234qwerty");
     assertThat(foundCompany.getAddress()).isEqualTo("Lviv");
   }
@@ -64,10 +66,12 @@ public class CompanyTest {
   @Test
   void testDeleteCompany() {
 
-    Company company = companyRepository.save(new Company(null, "ФОП Дмитро", "1234qwerty", "Lviv", LocalDateTime.now()));
+    Company company = companyRepository.save(
+        new Company(null, "Dmytro FOP", "1234qwerty", "Lviv", LocalDateTime.now()));
 
     companyService.deleteCompanyById(company.getId());
 
-    assertThrows(EntityNotFoundException.class, () -> companyService.getCompanyById(company.getId()));
+    assertThrows(EntityNotFoundException.class,
+        () -> companyService.getCompanyById(company.getId()));
   }
 }

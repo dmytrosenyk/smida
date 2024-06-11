@@ -41,7 +41,7 @@ public class CompanyControllerTests {
 
   @BeforeEach
   public void init() {
-    companyDto = CompanyDto.builder().name("ФОП Дмитро").registrationNumber("1234qwerty")
+    companyDto = CompanyDto.builder().name("Dmytro FOP").registrationNumber("1234qwerty")
         .address("Lviv").createdAt(LocalDateTime.now()).build();
   }
 
