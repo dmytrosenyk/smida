@@ -19,7 +19,7 @@
 1. File -> Project Structure -> Project Setting -> Project -> SDK   
 
     Choose java version `11`
-2. Then in maven panel `click` clean and `install`
+2. Then in maven panel click `clean` and `install`
 
    <img src="src/main/resources/maven.png" width="200">
 3. Next go to terminal and enter `docker-compose up --build`
