@@ -22,8 +22,9 @@ In the terminal enter `docker-compose up --build`
 
 Import Postman collection `smida.postman_collection.json` and test app.
 
+   <img src="src/main/resources/postman.jpg" width="300">
 
-   Credential:
+   Credential for Basic Auth:
 
    | username | password |
    |----------|----------|
