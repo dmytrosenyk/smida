@@ -20,7 +20,7 @@ In the terminal enter `docker-compose up --build`
 
 ### How to use?
 
-Import Postman collection and test app.
+Import Postman collection `smida.postman_collection.json` and test app.
 
 
    Credential:
