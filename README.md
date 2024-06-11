@@ -16,14 +16,11 @@
 
 ### How to start?
 
-1. File -> Project Structure -> Project Setting -> Project -> SDK   
+In the terminal enter `docker-compose up --build`
 
-    Choose java version `11`
-2. Then in maven panel `click` clean and `install`
+### How to use?
 
-   <img src="src/main/resources/maven.png" width="200">
-3. Next go to terminal and enter `docker-compose up --build`
-4. Then go to Postman and test app.
+Import Postman collection and test app.
 
 
    Credential:
